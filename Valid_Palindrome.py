@@ -15,11 +15,16 @@ class Solution:
 		l = list()
 		# remove characters other than 0-9 a-z
 		for i in range(len(s)):
+			if (s[i].isalnum()):
+				l.append(s[i])
+			'''
 			if (s[i] >= 'a' and s[i] <= 'z'):
 				l.append(s[i])
 			elif (s[i] >= '0' and s[i] <= '9'):
 				l.append(s[i])
-	
+			'''
+		print(l)
+		
 		# Set flag as True for initial
 		flag = True
 		# check if Palindrome
@@ -35,6 +40,6 @@ class Solution:
 if __name__ == "__main__":
 
 	solution = Solution()
-	s = "1a2"
+	s = "a."
 
 	print(solution.isPalindrome(s))
